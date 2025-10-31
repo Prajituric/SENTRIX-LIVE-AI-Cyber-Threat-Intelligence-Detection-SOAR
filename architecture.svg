@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .component { fill: #2c3e50; stroke: #34495e; stroke-width: 2; }
+    .module { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+    .data { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+    .security { fill: #27ae60; stroke: #2ecc71; stroke-width: 2; }
+    .flow { stroke: #7f8c8d; stroke-width: 2; marker-end: url(#arrowhead); }
+    text { font-family: Arial, sans-serif; fill: white; font-weight: bold; }
+    .title { font-size: 24px; fill: #2c3e50; text-anchor: middle; }
+    .label { font-size: 14px; fill: #2c3e50; text-anchor: middle; }
+    .component-text { font-size: 12px; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="40" class="title">SENTRIX LIVE++ Architecture</text>
+  
+  <!-- Data Collection Layer -->
+  <rect x="50" y="100" width="700" height="80" rx="5" ry="5" class="component" opacity="0.8"/>
+  <text x="400" y="130" class="label">Data Collection</text>
+  
+  <rect x="80" y="150" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="140" y="175" class="component-text">Syslog</text>
+  
+  <rect x="220" y="150" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="280" y="175" class="component-text">JSON Logs</text>
+  
+  <rect x="360" y="150" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="420" y="175" class="component-text">CEF Logs</text>
+  
+  <rect x="500" y="150" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="560" y="175" class="component-text">Cloud Audit</text>
+  
+  <!-- Processing Layer -->
+  <rect x="50" y="220" width="700" height="80" rx="5" ry="5" class="component" opacity="0.8"/>
+  <text x="400" y="250" class="label">Stream Processing</text>
+  
+  <rect x="150" y="270" width="120" height="40" rx="5" ry="5" class="data"/>
+  <text x="210" y="295" class="component-text">Kafka</text>
+  
+  <rect x="340" y="270" width="120" height="40" rx="5" ry="5" class="data"/>
+  <text x="400" y="295" class="component-text">Stream Parsers</text>
+  
+  <rect x="530" y="270" width="120" height="40" rx="5" ry="5" class="data"/>
+  <text x="590" y="295" class="component-text">Elasticsearch</text>
+  
+  <!-- Analysis Layer -->
+  <rect x="50" y="340" width="700" height="80" rx="5" ry="5" class="component" opacity="0.8"/>
+  <text x="400" y="370" class="label">AI Analysis</text>
+  
+  <rect x="150" y="390" width="120" height="40" rx="5" ry="5" class="security"/>
+  <text x="210" y="415" class="component-text">LLM Explainer</text>
+  
+  <rect x="340" y="390" width="120" height="40" rx="5" ry="5" class="security"/>
+  <text x="400" y="415" class="component-text">Guardrails</text>
+  
+  <rect x="530" y="390" width="120" height="40" rx="5" ry="5" class="security"/>
+  <text x="590" y="415" class="component-text">CTI Integration</text>
+  
+  <!-- Response Layer -->
+  <rect x="50" y="460" width="700" height="80" rx="5" ry="5" class="component" opacity="0.8"/>
+  <text x="400" y="490" class="label">Response & UI</text>
+  
+  <rect x="150" y="510" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="210" y="535" class="component-text">SOAR Engine</text>
+  
+  <rect x="340" y="510" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="400" y="535" class="component-text">FastAPI</text>
+  
+  <rect x="530" y="510" width="120" height="40" rx="5" ry="5" class="module"/>
+  <text x="590" y="535" class="component-text">React Dashboard</text>
+  
+  <!-- Flow Arrows -->
+  <!-- Collection to Processing -->
+  <line x1="140" y1="190" x2="140" y2="270" class="flow"/>
+  <line x1="280" y1="190" x2="280" y2="270" class="flow"/>
+  <line x1="420" y1="190" x2="420" y2="270" class="flow"/>
+  <line x1="560" y1="190" x2="560" y2="270" class="flow"/>
+  
+  <!-- Processing to Analysis -->
+  <line x1="210" y1="310" x2="210" y2="390" class="flow"/>
+  <line x1="400" y1="310" x2="400" y2="390" class="flow"/>
+  <line x1="590" y1="310" x2="590" y2="390" class="flow"/>
+  
+  <!-- Analysis to Response -->
+  <line x1="210" y1="430" x2="210" y2="510" class="flow"/>
+  <line x1="400" y1="430" x2="400" y2="510" class="flow"/>
+  <line x1="590" y1="430" x2="590" y2="510" class="flow"/>
+</svg>
