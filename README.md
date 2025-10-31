@@ -180,8 +180,4 @@ This architecture represents a significant advancement in security operations, c
 
 ## License
 
-MIT#   S E N T R I X - L I V E - A I - C y b e r - T h r e a t - I n t e l l i g e n c e - D e t e c t i o n - S O A R 
- 
- #   S E N T R I X - L I V E - A I - C y b e r - T h r e a t - I n t e l l i g e n c e - D e t e c t i o n - S O A R 
- 
- 
+MIT#
